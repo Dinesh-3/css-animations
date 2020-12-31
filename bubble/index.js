@@ -29,7 +29,7 @@ setInterval(
     () => {
         const x = Math.random() * canvas.width
         const y = Math.random() * canvas.height
-        let bubbleInstance = new Bubble(x, y, 30, "blue")
+        let bubbleInstance = new Bubble(x, y, 30, `rgba(${Math.random() *90},${Math.random()*100},${Math.random()*90},0.1)`)
         Bubbles.push(bubbleInstance)
     }, 1000
 )
