@@ -75,9 +75,9 @@ class ProjectEnemy {
 
 const projectTiles = []
 const ProjectEnemies = []
-
+let animationId
 function animate() {
-    requestAnimationFrame(animate)
+    animationId = requestAnimationFrame(animate)
     c.clearRect(0, 0, canvas.width, canvas.height);
     newPerson.draw()
     projectTiles.forEach(projectTile => {
@@ -87,6 +87,11 @@ function animate() {
     ProjectEnemies.forEach(
         projectEnemy => {
             projectEnemy.update()
+            const dist = Math.hypot(newPerson.x - projectEnemy.x, newPerson.y - projectEnemy.y )
+            // end game
+            if(dist - projectEnemy.radius){}
+        
+        
         }
     )
 }
