@@ -19,8 +19,15 @@ class Bubble {
         c.fillStyle = this.color
         c.fill()
     }
-    update(){
+    update(Bubbles,id){
         this.radius += 0.2
+        // Bubbles.forEach((tile,bubbleIndex) => {
+        //     let dist = Math.hypot(this.x - tile.x, this.y - tile.y)
+        //     if((dist - this.radius - tile.radius) < 1){
+        //         cancelAnimationFrame(id)
+        //     }
+        // })
+
     }
 }
 
@@ -46,17 +53,18 @@ setInterval(
     () => {
         const x = Math.random() * canvas.width
         const y = Math.random() * canvas.height
-        let bubbleInstance = new Bubble(x, y, 30, `rgba(${Math.random() *90},${Math.random()*100},${Math.random()*90},0.1)`)
+        let bubbleInstance = new Bubble(x, y, 30, `rgb(${Math.random()*90},${Math.random()*70},${Math.random()*120})`)
         Bubbles.push(bubbleInstance)
-    }, 1000
+    }, 2000
 )
 
 function animate() {
-    requestAnimationFrame(animate)
+    let id = requestAnimationFrame(animate)
     c.clearRect(0,0,canvas.width,canvas.height);
     Bubbles.forEach(bubble => {
         bubble.draw()
-        bubble.update()
+        bubble.update(Bubbles,id)
+        
     })
 
     projectTiles.forEach((tile, tileIndex) => {
@@ -80,7 +88,7 @@ animate();
 
 addEventListener(
     "click", event => {
-        let newTile = new ProjectTile(event.clientX, event.clientY, 20, "red")
+        let newTile = new ProjectTile(event.clientX, event.clientY, 5, "white")
         projectTiles.push(newTile)
         console.log(event);
     }
