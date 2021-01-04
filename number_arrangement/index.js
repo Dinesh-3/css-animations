@@ -28,7 +28,9 @@ function startGame() {
                     countElement.innerHTML = movesCount
                     const getProcessResult = getResult(numbersArray)
                     if (getProcessResult) {
+                        
                         console.log("Done");
+                        alert(`Your Win Total Moves : ${movesCount}`)
                         startButton.disabled = false;
                     }
                     console.log(`last - ${index} current - ${nullIndex} array - ${numbersArray}`);

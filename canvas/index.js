@@ -18,7 +18,7 @@ let interval = setInterval(() => {
     setTimeout(()=> {
         divElement.style.backgroundColor = 'white'
     },500)
-    if(count == 5){
+    if(count == 10){
         document.getElementById("submitButton").disabled = false;
         clearInterval(interval)
     }

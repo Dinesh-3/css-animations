@@ -20,7 +20,7 @@ class Bubble {
         c.fill()
     }
     update(Bubbles,id){
-        this.radius += 0.2
+        this.radius += 0.5
         // Bubbles.forEach((tile,bubbleIndex) => {
         //     let dist = Math.hypot(this.x - tile.x, this.y - tile.y)
         //     if((dist - this.radius - tile.radius) < 1){
@@ -53,7 +53,7 @@ setInterval(
     () => {
         const x = Math.random() * canvas.width
         const y = Math.random() * canvas.height
-        let bubbleInstance = new Bubble(x, y, 30, `rgb(${Math.random()*90},${Math.random()*70},${Math.random()*120})`)
+        let bubbleInstance = new Bubble(x, y, 30, `rgba(${Math.random()*90},${Math.random()*70},${Math.random()*120},0.5)`)
         Bubbles.push(bubbleInstance)
     }, 2000
 )
