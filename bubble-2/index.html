@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubble Game</title>
+</head>
+
+<body>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .noselect {
+            -webkit-touch-callout: none;
+            /* iOS Safari */
+            -webkit-user-select: none;
+            /* Safari */
+            -khtml-user-select: none;
+            /* Konqueror HTML */
+            -moz-user-select: none;
+            /* Old versions of Firefox */
+            -ms-user-select: none;
+            /* Internet Explorer/Edge */
+            user-select: none;
+            /* Non-prefixed version, currently
+                                            supported by Chrome, Edge, Opera and Firefox */
+        }
+
+       /* canvas {
+            height: 30rem;
+            width: 60rem;
+            border: 2px solid black;
+        } */
+        .header {
+            display: flex;
+        }
+    </style>
+    <!-- <div class="header"> -->
+        <!-- <form action="/home/user/Documents/animation_game/bubble-2/index.html" method="post"> -->
+            <!-- <button type="submit" id="start" class="noselect"> Start Game </button> -->
+            <!-- <button type="submit" id="start">Start</button> -->
+        <!-- </form> -->
+        <div style="font-size: 30px; padding: 10px;" class="noselect"><span>Score</span> <span id="score">0</span> </div>
+    <!-- </div> -->
+    <canvas></canvas>
+    <script src="./index.js"></script>
+</body>
+
+</html>

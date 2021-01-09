@@ -16,7 +16,7 @@ class Circle {
         this.radius = radius
         this.xvelocity = Math.random()
         this.yvelocity = Math.random()
-        this.color = `rgba(${Math.random()*80},${Math.random()*110},${Math.random()*120},0.7)`
+        this.color = `rgba(${Math.random() * 360},${Math.random() * 270},${Math.random() * 180})`
     }
     draw() {
         c.beginPath()
